@@ -40,7 +40,11 @@ class LoginPage extends StatelessWidget {
                           if (result) {
                             Navigator.of(context).pushReplacementNamed("/home");
                           } else {
-                            print("Failed");
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(const SnackBar(
+                              content: Text("Falha ao realizar login"),
+                              duration: Duration(seconds: 5),
+                            ));
                           }
                         });
                       },
