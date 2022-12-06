@@ -38,7 +38,7 @@ class LoginPage extends StatelessWidget {
                       onPressed: () {
                         _controller.auth().then((result) {
                           if (result) {
-                            print("Sucesso");
+                            Navigator.of(context).pushReplacementNamed("/home");
                           } else {
                             print("Failed");
                           }
