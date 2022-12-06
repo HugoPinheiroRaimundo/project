@@ -30,17 +30,22 @@ class LoginPage extends StatelessWidget {
               onChanged: _controller.setPassword,
             ),
             const SizedBox(height: 15),
-            ElevatedButton(
-              onPressed: () {
-                _controller.auth().then((result) {
-                  if (result) {
-                    print("Sucesso");
-                  } else {
-                    print("Failed");
-                  }
-                });
-              },
-              child: const Text("Login"),
+            ValueListenableBuilder(
+              valueListenable: _controller.inloader,
+              builder: (_, inLoader, __) => inLoader
+                  ? const CircularProgressIndicator()
+                  : ElevatedButton(
+                      onPressed: () {
+                        _controller.auth().then((result) {
+                          if (result) {
+                            print("Sucesso");
+                          } else {
+                            print("Failed");
+                          }
+                        });
+                      },
+                      child: const Text("Login"),
+                    ),
             )
           ],
         ),
