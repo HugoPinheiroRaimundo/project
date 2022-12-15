@@ -10,27 +10,36 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // Estrutura básica de layout "Fundo de tela branco limpo"
       body: Container(
-        padding: const EdgeInsets.all(28),
+        padding: const EdgeInsets.all(28), // espaçamento interno do container
         child: Column(
+          // a column faz que os elementos colocados abaixo fiquem um após o outro tipo uma TableView
+          // Centralizando o widget no meio da tela
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(Icons.people, size: 150),
+            Icon(Icons.people,
+                size: MediaQuery.of(context).size.height *
+                    0.2), // setando o icone do sistema e seu tamanho de acordo com a tela
             TextField(
               decoration: const InputDecoration(
-                label: Text("Login"),
+                // decoration é o estilo do textField basicamente
+                label: Text(
+                    "Login"), // Indicação ao usuário o que ele deve interagir tipo um placeholder
               ),
-              onChanged: _controller.setLogin, // Controla iteração do user no
+              onChanged: _controller
+                  .setLogin, // Controla iteração do user no textfield
             ),
             TextField(
               decoration: const InputDecoration(
                 label: Text("Senha"),
               ),
-              obscureText: true,
+              obscureText: true, // oculta a senha digitada
               onChanged: _controller.setPassword,
             ),
-            const SizedBox(height: 15),
+            const SizedBox(
+                height: 15), // Espaçamento entre o textfield e o button
             CustomLoginButtonComponents(loginController: _controller)
           ],
         ),

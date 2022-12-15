@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
+      // Navegação das telas rotas nomeadas.
       initialRoute: "/splash",
       routes: {
         "/splash": (_) => const SplashPage(),
