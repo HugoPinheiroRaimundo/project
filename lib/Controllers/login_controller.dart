@@ -1,13 +1,15 @@
 import 'package:flutter/foundation.dart';
 
 class LoginController {
-  ValueNotifier<bool> inloader = ValueNotifier<bool>(false);
+  ValueNotifier<bool> inloader = ValueNotifier<bool>(false); // Escuta a
 
-  String? _login;
-  setLogin(String value) => _login = value;
+  String? _login; // variável que podem ser null
+  setLogin(String value) =>
+      _login = value; // atribui o valor do textfield para a variável login
 
   String? _password;
-  setPassword(String value) => _password = value;
+  setPassword(String value) => _password =
+      value; // atribui o valor do textfield para a variável password
 
   Future<bool> auth() async {
     inloader.value = true;

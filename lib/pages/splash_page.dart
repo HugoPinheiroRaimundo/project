@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// O stateful é completamente dinâmico e nos dá o poder de torná-lo mutável através da gerência de estados
+// O stateful é um widget completamente dinâmico e nos dá o poder de torná-lo mutável através da gerência de estados
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
 
