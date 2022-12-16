@@ -22,5 +22,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
+// Fazer o flutter reconhecer um objeto moockado.
 assets:
-  - assets/data.json
+  - assets/data.json 
+
