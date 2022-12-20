@@ -11,7 +11,7 @@ class HomeController {
   ValueNotifier<List<PostModel>> posts = ValueNotifier<List<PostModel>>([]);
 
   fetch() async {
-    posts.value = await _homeRepository
-        .getList(); // o fetch vai na api pega o getlist e retorna no post.value
+    posts.value = await _homeRepository.getList();
+    // o fetch vai na api pega o getlist e retorna no post.value
   }
 }

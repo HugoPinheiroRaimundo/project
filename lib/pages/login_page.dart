@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project/Controllers/login_controller.dart';
 import 'package:project/components%20/%20login/custom_login_button_components.dart';
-import 'package:project/widgets/custom_text_field.widget.dart';
 
 class LoginPage extends StatelessWidget {
 // _controller tem a instância do arquivo login_controller logo acessa a classe de lá

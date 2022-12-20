@@ -11,8 +11,7 @@ class HomeRepositoryMock implements HomeRepository {
     var value = await rootBundle
         .loadString('assets/data.json'); // await pois é um feature de string
     List postJson = jsonDecode(value); // lista de post json
-    return postJson
-        .map((e) => PostModel.fromJson(e))
-        .toList(); // Trazendo a lista de json para uma lista de postModel
+    return postJson.map((e) => PostModel.fromJson(e)).toList();
+    // Trazendo a lista de json para uma lista de postModel
   }
 }
