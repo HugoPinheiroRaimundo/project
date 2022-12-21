@@ -11,4 +11,7 @@ class PostModel {
     // esse é o modelo que sabe construir um objeto atráves do postmodels
     return PostModel(json["userId"], json["id"], json["title"], json["body"]);
   }
+
+  @override
+  String toString() => "id: $id";
 }

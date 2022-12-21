@@ -25,11 +25,11 @@ class _SplashPageState extends State<SplashPage> {
   Widget build(BuildContext context) {
     // Cor da Splash e setando o indicador de progresso
     return Container(
-      color: Colors.lightBlue,
+      color: Colors.red,
       child: const Center(
         // centralizando o indicador de progresso
         child: CircularProgressIndicator(
-          color: Colors.deepPurple,
+          color: Colors.white,
         ),
       ),
     );

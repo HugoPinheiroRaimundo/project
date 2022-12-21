@@ -4,6 +4,7 @@ import 'package:project/model/post_model.dart';
 import 'package:project/repositories/home_repository.dart';
 import 'package:flutter/services.dart'; // habilita o rootBundle
 
+// Repositório mockado
 class HomeRepositoryMock implements HomeRepository {
   @override
   Future<List<PostModel>> getList() async {

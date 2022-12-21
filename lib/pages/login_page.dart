@@ -4,7 +4,7 @@ import 'package:project/components%20/%20login/custom_login_button_components.da
 
 class LoginPage extends StatelessWidget {
 // _controller tem a instância do arquivo login_controller logo acessa a classe de lá
-  LoginController _controller = LoginController();
+  final LoginController _controller = LoginController();
 
   LoginPage({super.key});
 
